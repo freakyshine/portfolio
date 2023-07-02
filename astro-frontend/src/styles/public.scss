@@ -1,0 +1,53 @@
+$cornflowerBlue: #797EF6;
+$viking: #4ADEDE;
+$pictonBlue: #1AA7EC;
+$jacksonPurple: #1E2F97;
+$roseEbony: #503D42;
+
+$accent: #FFA500;
+$complementary: #5A5A5A;
+$secondary: #FFFFFF;
+$highlight: #00BFFF;
+$shade: #333333;
+$midnightGray: #1F1F1F;
+
+body {
+    color: $secondary;
+    background-color: $midnightGray;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1.headline {
+    font-size: 3.5rem;
+}
+
+.accent {
+    color: $viking;
+}
+
+.black {
+    color: $midnightGray;
+}
+
+a {
+    &:hover, &.active {
+        color: $cornflowerBlue;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .mobile {
+        visibility: visible;
+    }
+}
+
+@media only screen and (min-width:901px) {
+    h1.headline {
+        margin: 15rem 0rem 2.5rem 15rem;
+    }
+}

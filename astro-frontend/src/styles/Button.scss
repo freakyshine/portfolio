@@ -1,0 +1,33 @@
+$cornflowerBlue: #797EF6;
+$viking: #4ADEDE;
+$pictonBlue: #1AA7EC;
+$jacksonPurple: #1E2F97;
+$roseEbony: #503D42;
+
+
+$accent: #ff7b00;
+$complementary: #5A5A5A;
+$secondary: #FFFFFF;
+$highlight: #00BFFF;
+$shade: #333333;
+$midnightGray: #1F1F1F;
+
+.cta-button {
+    transition: background-color .35s;
+    padding: .25rem 2.5rem;
+    border-radius: 15px;
+    background-color: $cornflowerBlue;
+    // background: linear-gradient(45deg, $accent, $cornflowerBlue);
+    width: max-content;
+    margin-left: 15rem;
+
+    &:hover {
+        background-color: $cornflowerBlue;
+        cursor: pointer;
+    }
+}
+
+p {
+    font-size: 1.25rem;
+    font-weight: bold;
+}

@@ -1,0 +1,52 @@
+---
+import '../../styles/default-layout.scss'
+
+const currentPath = new URL(Astro.request.url).pathname.slice(1);
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:ital,wght@0,400;0,700;1,100&display=swap" rel="stylesheet">		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Daniel Lutz Portfolio</title>
+	</head>
+	<body>
+        <div class="gridContainer">
+            <p id="open" class="mobile">Menu</p>
+            <nav class="closed">
+                <ul>
+                    <li><a class={currentPath === "" ? "active" : ""} href="/">Home</a></li>
+                    <li><a class={currentPath === "skills" ? "active" : ""} href="/skills">Skills</a></li>
+                    <li><a class={currentPath === "about" ? "active" : ""} href="about">Background</a></li>
+                    <li><a class={currentPath === "contact" ? "active" : ""} href="/contact">Contact</a></li>
+                </ul>
+                <p id="close" class="mobile black">Close</p>
+            </nav>
+            <main>
+                <slot/>
+            </main>
+            <footer>
+                <ul>
+                    <li>Made with passion &#10084;</li>
+                    <li>Copyright &copy; 2023 Daniel Lutz</li>
+                </ul>
+            </footer>
+        </div>
+
+        <script>
+            document.getElementById("open").addEventListener('click', () => {
+                document.getElementsByTagName("nav")[0].classList.remove("closed");
+                document.getElementById("open").style.display = "none";
+            });
+            document.getElementById("close").addEventListener('click', () => {
+                document.getElementsByTagName("nav")[0].classList.add("closed");
+                document.getElementById("open").style.display = "block";
+            });
+          </script>
+
+    </body>
+</html>
+    
