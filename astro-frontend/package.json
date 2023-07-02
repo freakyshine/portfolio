@@ -4,12 +4,12 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
-    "build": "npm run check && astro build",
+    "start": "npm run check && astro dev",
+    "build": "npm run fix && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fix": "eslint --fix --ext .js,.jsx,.html,.css,.sass,.scss",
-    "fix": "eslint --ext .js,.jsx,.html,.css,.sass,.scss"
+    "check": "eslint --ext .js,.jsx,.html,.css,.sass,.scss",
+    "fix": "eslint --fix --ext .js,.jsx,.html,.css,.sass,.scss"
   },
   "dependencies": {
     "astro": "^2.7.2"
@@ -22,6 +22,7 @@
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
+    "sass": "^1.63.6",
     "typescript": "^5.1.6"
   }
 }
