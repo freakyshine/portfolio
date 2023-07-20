@@ -1,8 +1,15 @@
 ---
 import '../styles/Button.scss'
-const { caption } = Astro.props
+const { caption, path } = Astro.props
 ---
 
 <div class="cta-button">
     <p>{ caption }</p>
 </div>
+
+<script define:vars={{ path }}>
+
+    document.getElementsByClassName("cta-button")[0].addEventListener('click', () => {
+        window.location.href = path;
+    })
+</script>

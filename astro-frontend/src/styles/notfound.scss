@@ -1,0 +1,30 @@
+$cornflowerBlue: #797EF6;
+$viking: #4ADEDE;
+$pictonBlue: #1AA7EC;
+$jacksonPurple: #1E2F97;
+$roseEbony: #503D42;
+
+$accent: #FFA500;
+$complementary: #5A5A5A;
+$secondary: #FFFFFF;
+$highlight: #00BFFF;
+$shade: #333333;
+$midnightGray: #1F1F1F;
+
+body {
+    background-color: $midnightGray;
+}
+
+img {
+    height: 200px;
+    border-radius: 30px;
+    box-shadow: 14px 10px 0px 0px $cornflowerBlue;
+}
+
+div {
+    align-items: flex-end;
+}
+
+.cta-button {
+    margin-left: 8vw;
+}

@@ -10,6 +10,11 @@ $midnightGray: #1F1F1F;
     flex-direction: column
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 footer {
     ul {
         list-style-type: none;
