@@ -11,6 +11,11 @@ $highlight: #00BFFF;
 $shade: #333333;
 $midnightGray: #1F1F1F;
 
+html {
+    /* Prevent font scaling in landscape while allowing user zoom */
+    -webkit-text-size-adjust: 100%; 
+}
+
 body {
     color: $secondary;
     background-color: $midnightGray;
@@ -20,10 +25,6 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
-}
-
-h1.headline {
-    font-size: 3.5rem;
 }
 
 .accent {
