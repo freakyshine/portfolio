@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "npm run check && astro dev",
+    "start": "astro dev",
     "build": "npm run fix && astro build",
     "preview": "astro preview",
     "astro": "astro",
