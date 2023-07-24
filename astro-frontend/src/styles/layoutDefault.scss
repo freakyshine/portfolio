@@ -1,0 +1,36 @@
+$accent: #ff7b00;
+$complementary: #5A5A5A;
+$secondary: #FFFFFF;
+$highlight: #00BFFF;
+$shade: #333333;
+$midnightGray: #1F1F1F;
+
+.content-frame {
+    display: flex;
+    flex-direction: column
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:900px) {
+    main {
+        padding: 0 10vw;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    main {
+        padding: 0 4vw;
+    }
+}

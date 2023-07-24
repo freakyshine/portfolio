@@ -1,0 +1,31 @@
+---
+import '../styles/public.scss'
+import '../styles/notfound.scss'
+import Layout from '../components/layout/layoutDefault.astro'
+import HeroSection from '../components/layout/HeroSection.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout pageTitle="Nope.">
+    <HeroSection>
+        <noscript>
+            <h1>404 This page could not be found</h1>
+        </noscript>
+        <h1></h1>
+        <div class="flex-row">
+            <img src="" alt="">
+            <Button caption="Home &#xbb;" path="/"/>
+        </div>
+    </HeroSection>
+
+</Layout>
+
+<script>
+    const messages = new Array("That didn't go well", "You lost your way...")
+    
+    const images = new Array("/public/media/challenger404.gif", "/public/media/joe404.gif", "/public/media/madeup404.gif", "/public/media/weekend404.gif")
+    
+    var randomNum = Math.floor(Math.random() * 4);
+    document.getElementsByTagName("img")[0].src = images[randomNum];
+    document.getElementsByTagName("h1")[0].innerHTML = messages[randomNum % 2];
+</script>

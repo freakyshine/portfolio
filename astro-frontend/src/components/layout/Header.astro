@@ -1,0 +1,26 @@
+---
+const currentPath = new URL(Astro.request.url).pathname.slice(1);
+import '../../styles/header.scss'
+---
+<header>
+<p id="open" class="mobile">Menu</p>
+<nav class="closed">
+    <ul>
+        <li><a class={currentPath === "" ? "active" : ""} href="/">Home</a></li>
+        <li><a class={currentPath === "skills" ? "active" : ""} href="/skills">Skills</a></li>
+        <li><a class={currentPath === "about" ? "active" : ""} href="about">Background</a></li>
+        <li><a class={currentPath === "contact" ? "active" : ""} href="/contact">Contact</a></li>
+    </ul>
+    <p id="close" class="mobile black">Close</p>
+</nav>
+
+<script>
+    document.getElementById("open").addEventListener('click', () => {
+        document.getElementsByTagName("nav")[0].classList.remove("closed");
+        document.getElementById("open").style.display = "none";
+    });
+    document.getElementById("close").addEventListener('click', () => {
+        document.getElementsByTagName("nav")[0].classList.add("closed");
+        document.getElementById("open").style.display = "block";
+    });
+  </script></header>

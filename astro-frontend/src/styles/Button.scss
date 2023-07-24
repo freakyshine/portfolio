@@ -14,15 +14,14 @@ $midnightGray: #1F1F1F;
 
 .cta-button {
     transition: background-color .35s;
-    padding: .25rem 2.5rem;
+    padding: .05rem 2.5rem;
     border-radius: 15px;
     background-color: $cornflowerBlue;
     // background: linear-gradient(45deg, $accent, $cornflowerBlue);
     width: max-content;
-    margin-left: 15rem;
 
     &:hover {
-        background-color: $cornflowerBlue;
+        background-color: $viking;
         cursor: pointer;
     }
 }

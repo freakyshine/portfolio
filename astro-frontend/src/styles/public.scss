@@ -11,6 +11,11 @@ $highlight: #00BFFF;
 $shade: #333333;
 $midnightGray: #1F1F1F;
 
+html {
+    /* Prevent font scaling in landscape while allowing user zoom */
+    -webkit-text-size-adjust: 100%; 
+}
+
 body {
     color: $secondary;
     background-color: $midnightGray;

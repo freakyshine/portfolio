@@ -1,28 +1,9 @@
-// $cornflowerBlue: #797EF6;
-// $viking: #4ADEDE;
-// $pictonBlue: #1AA7EC;
-// $jacksonPurple: #1E2F97;
-// $roseEbony: #503D42;
-
-
 $accent: #ff7b00;
 $complementary: #5A5A5A;
 $secondary: #FFFFFF;
 $highlight: #00BFFF;
 $shade: #333333;
 $midnightGray: #1F1F1F;
-
-.gridContainer {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 1fr;
-    grid-template-areas: 
-        "nav nav"
-        "main main"
-        "footer footer";
-    grid-gap: 0.25rem;
-}
 
 nav {
     display: flex;
@@ -37,7 +18,8 @@ nav {
 & ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    // 1.35rem is header height
+    padding: 1.35rem 0;
 
     & li{        
         display: inline;
@@ -59,35 +41,13 @@ nav {
 
 #open {
     position: absolute;
+    z-index: 3;
     right: 3rem;
     top: 1rem;
-}
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
-    align-self: end;
-
-    ul {
-        list-style-type: none;
-    }
+    color: $highlight;
 }
 
 @media only screen and (max-width:900px) {
-    main {
-        margin-top: 3rem;
-    }
-    .gridContainer {
-        grid-template-columns: .75fr .8fr;
-        grid-template-rows: 0.2fr 1fr 1fr;
-        grid-template-areas: 
-        "main nav"
-        "main nav"
-        "footer nav";
-    }
     nav {
         position: absolute;
         right: 0;
@@ -107,24 +67,20 @@ footer {
         & ul li {
             display: list-item;
             padding-bottom: 1rem;
-    
+
             & a {
                 font-size: 2rem;
             }
         } 
     } 
-}
+} 
 
-@media only screen and (min-width:901px) {
+@media only screen and (min-width:900px) {
     nav {        
         align-items: center;
 
         & ul li {
             padding-right: 2rem;
         }
-    }
-    main, footer {
-        width: 80vw;
-        margin: 0 auto;
     }
 }
