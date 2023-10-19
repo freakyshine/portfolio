@@ -1,5 +1,4 @@
 ---
-import Header from './Header.astro'
 import '../../styles/layoutDefault.scss'
 const { pageTitle } = Astro.props;
 ---
@@ -14,18 +13,13 @@ const { pageTitle } = Astro.props;
 		<title>{ pageTitle }</title>
 	</head>
 	<body>
-        <Header is:visible></Header>
+        <slot name="header"/>
         
         <main>
             <slot/>
         </main>
 
-        <footer>
-            <ul>
-                <li>Made with Passion <span class="accent">&#10084;</span></li>
-                <li>Copyright &copy; 2023 Daniel Lutz</li>
-            </ul>
-        </footer>
+        <slot name="footer">
     </body>
 </html>
     

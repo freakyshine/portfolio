@@ -1,0 +1,37 @@
+---
+const {logoPath, caption, subtitle, list, ctaCaption, ctaPath} = Astro.props;
+---
+
+<div class="teaserItem">
+    <div class="teaserItemHead">
+        {
+            logoPath &&
+            <img src={logoPath} alt="teaser item logo">
+        }
+        <div class="caption">
+            {
+                caption &&
+                <h4>{caption}</h4>
+            }
+            {
+                subtitle && ctaPath &&
+                <a class="subtitle" href={ctaPath}>{subtitle}</a>
+            }
+        </div>
+    </div> 
+
+    {
+        list &&
+        <ul>
+            {
+                list.split(", ").map((listItem:any) =>
+                <li>{listItem}</li>
+                )
+            }
+            
+            <a href={ctaPath}>
+                <p>{ctaCaption}</p>
+            </a>
+        </ul>
+    }   
+</div>

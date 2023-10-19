@@ -1,18 +1,43 @@
 ---
+import Header from '../components/layout/Header.astro'
 import Layout from '../components/layout/layoutDefault.astro'
-import Button from '../components/Button.astro'
 import HeroSection from '../components/layout/HeroSection.astro'
+import Section from '../components/layout/sectionDefault.astro'
+import CTA from '../components/CTA.astro'
+import '../styles/cardBoard.scss'
 import '../styles/public.scss'
 import 'animate.css'
+import Teaser from '../components/Teaser.astro'
+import TeaserItem from '../components/TeaserItem.astro'
 ---
 
 <Layout pageTitle="Daniel Lutz Portfolio">
-	<div class="content-frame">
-		<HeroSection class="animate__fadeIn animate__animated animate__slow animate__delay-1s">
-			<h1>Daniel Lutz <br><span class="accent">Web</span> Portfolio.</h1>
-			
-			<Button caption="Discover!" path="#LOC"/>
-		</HeroSection>
-	</div>
-	
+	<Header slot="header" is:visible />
+	<HeroSection>
+		<h1 class="animate__animated animate__fadeIn animate__delay-1s">A digital <span class="orange">portfolio</span></h1><h1><span class="blue">Daniel</span> Lutz</h1>
+	</HeroSection>
+
+	<Section title="/* Hello world */">
+		<p>
+			In this Portfolio you will have the oppurtunity to view my digital work and learn about my person.
+			Share your impressions: Feel free to contact me via the given information down below.
+		</p>
+
+		<CTA caption="&darr;&darr;&darr;" path="#Highlighted Projects"/>
+	</Section>
+
+	<Section title="Highlighted Projects">
+		<Teaser>
+			<TeaserItem logoPath="/media/svg/github-mark.svg" caption="Web Portfolio" subtitle="github@freakyshine/portfolio" list="Node, Astro Framework, Web Design, SCSS with CSS Selectors, Linting, Git Versioning" ctaCaption="Go to Project" ctaPath="https://github.com/freakyshine/portfolio"/>
+			<TeaserItem logoPath="/media/svg/github-mark.svg" caption="ATM32-elevatorController" subtitle="github@freakyshine/ATM32-elevatorController" list="C Language, Includes hardware, Documentation, Refactoring & bug fixing" ctaCaption="Go to Project" ctaPath="https://github.com/freakyshine/ATM32-elevatorController"/>
+			<TeaserItem logoPath="/media/svg/github-mark.svg" caption="WPF Calculator" subtitle="github@freakyshine/m404-guicalculator" list="C# Language, Object Oriented Programming, GUI, Error handling" ctaCaption="Go to Project" ctaPath="https://github.com/freakyshine/m404-guicalculator"/>
+		</Teaser>
+	</Section>
 </Layout>
+
+<footer slot="footer">
+	<ul>
+		<li>Made with Passion <span>&#10084;</span></li>
+		<li>Copyright &copy; 2023 Daniel Lutz</li>
+	</ul>
+</footer>

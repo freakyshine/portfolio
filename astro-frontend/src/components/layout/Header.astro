@@ -3,15 +3,15 @@ const currentPath = new URL(Astro.request.url).pathname.slice(1);
 import '../../styles/header.scss'
 ---
 <header>
-<p id="open" class="mobile">Menu</p>
-<nav class="closed">
+<p id="open" class="mobile bold">Menu</p>
+<nav class="closed bold">
     <ul>
-        <li><a class={currentPath === "" ? "active" : ""} href="/">Home</a></li>
-        <li><a class={currentPath === "skills" ? "active" : ""} href="/skills">Skills</a></li>
-        <li><a class={currentPath === "about" ? "active" : ""} href="about">Background</a></li>
-        <li><a class={currentPath === "contact" ? "active" : ""} href="/contact">Contact</a></li>
+        <li><a class={currentPath === "" ? "active uncasual" : "uncasual"} href="/">Welcome</a></li>
+        <li><a class={currentPath === "#Highlighted%20Projects" ? "active uncasual" : "uncasual"} href="/#Highlighted Projects">Projects</a></li>
+        <!-- <li><a class={currentPath === "about" ? "active uncasual" : "uncasual"} href="/about">Me</a></li> -->
+        <!-- <li><a class={currentPath === "gallery" ? "active uncasual" : "uncasual"} href="/gallery">Gallery</a></li> -->
     </ul>
-    <p id="close" class="mobile black">Close</p>
+    <p id="close" class="mobile dark">Close</p>
 </nav>
 
 <script>

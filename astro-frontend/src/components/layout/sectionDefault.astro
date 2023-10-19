@@ -1,0 +1,10 @@
+---
+import '../../styles/section.scss'
+
+const { title, color } = Astro.props
+---
+
+<section id={title} class={color}>
+    <h2>{title}</h2>
+    <slot/>
+</section>

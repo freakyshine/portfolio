@@ -1,11 +1,111 @@
+$cornflowerBlue: #797EF6;
+$viking: #4ADEDE;
+$pictonBlue: #1AA7EC;
+$jacksonPurple: #1E2F97;
+$roseEbony: #503D42;
+
+$accent: #FFA500;
+$complementary: #5A5A5A;
+$secondary: #FFFFFF;
+$highlight: #00BFFF;
+$shade: #333333;
+$midnightGray: #1F1F1F;
+$darkBlack: #001220;
+
 section {
-    min-height: calc(50rem - 2rem);
+    // min-height: calc(50rem - 2rem);
+    
+    & h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+section.shade {
+    background-color: $shade;
+}
+
+section.darkBlack {
+    background-color: $darkBlack;
+}
+
+section.blue {
+    background-color: $cornflowerBlue;
+}
+
+section.accent {
+    background-color: $accent;
 }
 
 section.hero {
-    padding: 15vh 0 0 10vw;
+    padding: 25vh 0 10vh 10vw;
 
     & h1 {
         font-size: 3rem;
+        text-shadow: 7px 7px 7px black;
+    }
+}
+
+.spacer {
+    aspect-ratio: 16/9;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.spacer1 {
+    background-image: url('/media/svg/stacked-waves-darkToBlue16to9.svg');
+}
+.spacer2 {
+    background-image: url('/media/svg/stacked-waves-blueToDark16to9.svg');
+}
+.spacer3 {
+    background-image: url('/media/svg/stacked-waves-blueToShade16to9.svg');
+}
+.spacer4 {
+    background-image: url('/media/svg/layered-peaks-orangeToBlue16to9.svg');
+}
+.spacer5 {
+    background-image: url('/media/svg/layered-peaks-darkToOrange16to9.svg');
+}
+.spacer6 {
+    background-image: url('/media/svg/layered-peaks-orangeToBlue16to9.svg');
+}
+
+
+@media only screen and (min-width:900px) {
+    section {
+        padding: 2.55rem 10vw 2rem 10vw;
+    }
+    .spacer {
+        aspect-ratio: 24/5;
+    }
+    .spacer1 {
+        background-image: url('/media/svg/stacked-waves-darkToBlue24to5.svg');
+    }
+    .spacer2 {
+        background-image: url('/media/svg/stacked-waves-BlueToDark24to5.svg');
+    }
+    .spacer3 {
+        background-image: url('/media/svg/stacked-waves-blueToShade24to5.svg');
+    }
+    .spacer4 {
+        background-image: url('/media/svg/layered-peaks-orangeToBlue24to5.svg');
+    }
+    .spacer5 {
+        background-image: url('/media/svg/layered-peaks-darkToOrange24to5.svg');
+    }
+    .spacer6 {
+        background-image: url('/media/svg/layered-peaks-orangeToBlue24to5.svg');
+    }
+}
+
+@media only screen and (max-width:900px) {
+    section {
+        padding: 2rem 4vw 2rem 4vw;
+    }
+    section.hero {
+        padding: 15vh 0 10vh 10vw;
     }
 }

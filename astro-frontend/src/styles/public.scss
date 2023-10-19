@@ -1,24 +1,29 @@
 $cornflowerBlue: #797EF6;
+$cornflowerNight: #4d4f8b;
 $viking: #4ADEDE;
+$sfeh: #06e09f;
+$hewfh: #038373;
 $pictonBlue: #1AA7EC;
 $jacksonPurple: #1E2F97;
 $roseEbony: #503D42;
 
-$accent: #FFA500;
+$accent: #ff7b00;
 $complementary: #5A5A5A;
 $secondary: #FFFFFF;
 $highlight: #00BFFF;
 $shade: #333333;
 $midnightGray: #1F1F1F;
+$darkBlack: #001220;
 
 html {
     /* Prevent font scaling in landscape while allowing user zoom */
     -webkit-text-size-adjust: 100%; 
+    scroll-behavior: smooth;
 }
 
 body {
     color: $secondary;
-    background-color: $midnightGray;
+    background-color: $darkBlack;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
@@ -27,22 +32,55 @@ h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
 }
 
-h1.headline {
-    font-size: 3.5rem;
-    text-shadow: 7px 7px 7px black;
+p {
+    max-width: 85%;
 }
 
-.accent {
+span.orange {
+    color: $accent;
+}
+
+span.viking {
     color: $viking;
 }
 
-.black {
+span.blue {
+    color: $cornflowerBlue;
+}
+
+// .accent {
+//     color: $viking;
+// }
+
+.dark {
     color: $midnightGray;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 a {
-    &:hover, &.active {
+    &:hover {
+        color: $cornflowerNight;
+    }
+
+    &.casual {
+        text-decoration: none;
+        color: $sfeh;
+
+        &:hover {
+            color: $cornflowerNight;
+        }
+    }
+
+    &.uncasual {
+        text-decoration: none;
         color: $cornflowerBlue;
+
+        &:hover {
+            color: $cornflowerNight;
+        }
     }
 }
 
@@ -53,7 +91,4 @@ a {
 }
 
 @media only screen and (min-width:901px) {
-    h1.headline {
-        margin: 15rem 0rem 2.5rem 15rem;
-    }
 }

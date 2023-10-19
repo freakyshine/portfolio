@@ -4,6 +4,13 @@ $secondary: #FFFFFF;
 $highlight: #00BFFF;
 $shade: #333333;
 $midnightGray: #1F1F1F;
+$cornflowerBlue: #797EF6;
+$cornflowerNight: #4d4f8b;
+
+header {
+    position: absolute;
+    z-index: 10;
+}
 
 nav {
     display: flex;
@@ -29,7 +36,10 @@ nav {
             font-family: 'Lato', sans-serif;
             font-size: 1.2rem;
             font-weight: bold;
-            text-decoration: none;
+
+            &.active {
+                color: $cornflowerNight;
+            }
         }
     } 
 }
@@ -44,35 +54,52 @@ nav {
     z-index: 3;
     right: 3rem;
     top: 1rem;
-    color: $highlight;
+    color: $cornflowerBlue;
+}
+
+#open, #close {
+    cursor: pointer;
 }
 
 @media only screen and (max-width:900px) {
-    nav {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        padding-right: 2rem;
-        justify-content: center;
-        flex-direction: column;
-        transition: width 15s;
-
-        &.closed {
-            display: none;
-            width: 0;
-            padding: 0;
+    header {
+        #open {
+            position: fixed;
+            // text-shadow: $complementary 3px 2px;
         }
 
-        & ul li {
-            display: list-item;
-            padding-bottom: 1rem;
+        & nav {
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding-right: 2rem;
+            justify-content: center;
+            flex-direction: column;
+            // transition: visibility 0s, opacity 0.5s linear;
+            visibility: visible;
+            opacity: 1;
 
-            & a {
-                font-size: 2rem;
+            &.closed {
+                visibility: hidden;
+                opacity: 0;
+                padding: 0;
             }
+
+            & ul li {
+                display: list-item;
+                padding-bottom: 1rem;
+
+                & a {
+                    font-size: 2rem;
+
+                    &.active::after {
+                        content: " \25C0";
+                    }
+                }
+            } 
         } 
-    } 
+    }
 } 
 
 @media only screen and (min-width:900px) {
@@ -82,5 +109,10 @@ nav {
         & ul li {
             padding-right: 2rem;
         }
+    }
+    header {
+        position: fixed;
+        left: 0;
+        right: 0;
     }
 }
